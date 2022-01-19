@@ -1,0 +1,42 @@
+$lite: $blue-400;
+$size: 60px;
+.loader-wrapper {
+    min-width: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    transition: 0.3s linear;
+    z-index: 1040;
+}
+.loader {
+    width: $size / 6;
+    height: $size;
+    display: inline-block;
+    position: relative;
+    left: -50px;
+    animation: animloader 1s linear infinite alternate;
+}
+@keyframes animloader {
+    0% {
+        box-shadow: 20px 0 rgba($lite, 0.25), 40px 0 rgba($lite, 1), 60px 0 rgba($lite, 1), 80px 0 rgba($lite, 1),
+            100px 0 rgba($lite, 1);
+    }
+    25% {
+        box-shadow: 20px 0 rgba($lite, 1), 40px 0 rgba($lite, 0.25), 60px 0 rgba($lite, 1), 80px 0 rgba($lite, 1),
+            100px 0 rgba($lite, 1);
+    }
+    50% {
+        box-shadow: 20px 0 rgba($lite, 1), 40px 0 rgba($lite, 1), 60px 0 rgba($lite, 0.25), 80px 0 rgba($lite, 1),
+            100px 0 rgba($lite, 1);
+    }
+    75% {
+        box-shadow: 20px 0 rgba($lite, 1), 40px 0 rgba($lite, 1), 60px 0 rgba($lite, 1), 80px 0 rgba($lite, 0.25),
+            100px 0 rgba($lite, 1);
+    }
+    100% {
+        box-shadow: 20px 0 rgba($lite, 1), 40px 0 rgba($lite, 1), 60px 0 rgba($lite, 0.25), 80px 0 rgba($lite, 1),
+            100px 0 rgba($lite, 0.25);
+    }
+}

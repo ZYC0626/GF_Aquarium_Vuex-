@@ -1,0 +1,90 @@
+.water-waves {
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    animation: water-waves linear infinite;
+}
+.water-wave1 {
+    position: absolute;
+    top: 15%;
+    left: -60%;
+    background: $cyan-200;//#77dfff;
+    opacity: 0.5;
+    width: 200%;
+    height: 200%;
+    border-radius: 35%;
+    animation: inherit;
+    animation-duration: 10s;
+    @include media-breakpoint-up(lg) {
+        top: 65%;
+    }
+}
+.water-wave2 {
+    position: absolute;
+    top: 15%;
+    left: -60%;
+    background: $cyan-200;//#77dfff;
+    opacity: 0.4;
+    width: 200%;
+    height: 200%;
+    border-radius: 35%;
+    animation: inherit;
+    animation-duration: 11s;
+    @include media-breakpoint-up(lg) {
+        top: 65%;
+    }
+}
+.water-wave3 {
+    position: absolute;
+    top: 15%;
+    left: -60%;
+    background: $cyan-200;//#77dfff;
+    opacity: 0.3;
+    width: 200%;
+    height: 200%;
+    border-radius: 35%;
+    animation: inherit;
+    animation-duration: 12s;
+    @include media-breakpoint-up(lg) {
+        top: 65%;
+    }
+}
+@keyframes water-waves {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.water-text {
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    color: $blue-700;
+    animation: bounce linear infinite;
+    animation-duration: 1.5s;
+    writing-mode: vertical-rl;
+    @include media-breakpoint-up(lg) {
+        writing-mode:inherit;
+        left: 15%;
+    }
+}
+@keyframes bounce {
+    0%   {transform: translateY(0);}
+    20%  {transform: translateY(0);} 
+    80%  {transform: translateY(0);} 
+    100% {transform: translateY(0);} 
+    40%  {transform: translateY(30px);}
+    60%  {transform: translateY(15px);}
+}
+
+.wave-bottom {
+    background: (linear-gradient(to bottom, #b2eefa, transparent 70%));
+    height: 150px;
+}

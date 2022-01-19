@@ -1,0 +1,50 @@
+.ticket {
+    position: relative;
+    border: 0px solid transparent;
+    background: $blue-700;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    padding: 1em 2em;
+    overflow: hidden;
+    .ticket-dash{
+        border-left: 1px dashed white;
+    }
+    .ticket-text{
+        font-size: 1.4rem;
+        letter-spacing: 0.2rem;
+    }
+}
+.ticket:before,
+.ticket:after{
+    content: '';
+    position: absolute;
+    top: 1.2em;
+    height: 1.4em;
+    width: 1.4em;
+    border: 2px solid $blue-700;
+    background-color: white;
+    border-radius: 50%;
+}
+.ticket:before {
+    left: -0.7em;
+}
+.ticket:after {
+    right: -0.7em;
+}
+.ticket-copy{
+    border-radius: 3px;
+    background-color: $blue-700;
+    color: #fff;
+    padding: 8px 3px;
+    width: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    &:hover{
+        background-color: $blue-600;
+        color: #fff;
+    }
+}

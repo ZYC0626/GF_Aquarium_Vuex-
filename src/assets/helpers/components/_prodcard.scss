@@ -1,0 +1,118 @@
+.prodCard {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.25rem;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    .prodCard-like {
+        position: absolute;
+        top: 0.8rem;
+        left: -0.25rem;
+        padding: 0 0.8rem 0.2rem;
+        font-size: 1.5rem;
+        color: $cyan-200;
+        background-color: white;
+        border-top-left-radius: 0;
+        border-top-right-radius: 40%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 40%;
+        box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    .prodCard-tag {
+        position: absolute;
+        top: -0.5rem;
+        right: 0.5rem;
+        background: $blue-700;
+        font-size: 16px;
+        padding: 12px 8px;
+        color: white;
+        letter-spacing: 8px;
+        writing-mode: vertical-rl;
+    }
+    .prodCard-tag::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -25px;
+        border: 20px solid;
+        border-color: $blue-700 $blue-700 transparent $blue-700;
+    }
+    .prodCardImg {
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        height: 200px;
+        position: relative;
+        z-index: 0;
+        &:hover::before {
+            font-family: "Material Icons";
+            content: "\e8ff";
+            text-align: center;
+            padding: 50px 0;
+            font-size: 66px;
+            color: white;
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+            background-color: rgba(0, 0, 0, 0.3);
+            animation-name: bghover;
+            animation-duration: 1s;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+        }
+    }
+    .prodCard-title {
+        margin: 0.8rem 0;
+        text-align: center;
+        font-size: 1.5rem;
+        letter-spacing: 0.25rem;
+        display: block;
+    }
+    .prodCard-content {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    .prodCard-footer {
+        font-size: 1.2rem;
+        letter-spacing: 0.5rem;
+        border-top: 0.5px solid rgba(0, 0, 0, 0.3);
+        .btn {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+        }
+    }
+    .prodCard-hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+.prodCard-price {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.8rem;
+    .origin {
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.3);
+    }
+    .sale {
+        font-size: 1.3rem;
+        font-weight: bolder;
+        color: $blue-800;
+    }
+}
+
+.prodCard:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bghover {
+    from {background-color: inherit;}
+    to {background-color: rgba(0,0,0,.3);}
+}

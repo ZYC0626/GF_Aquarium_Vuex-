@@ -1,0 +1,52 @@
+.back-end-btn {
+    display: block;
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    &.back-end-add {
+        color: white;
+        background-color: $blue-700;
+        &:hover{
+            color: $blue-700;
+            background-color: $cyan-100; 
+        }
+    }
+    &.back-end-edit {
+        width: 2.5em;
+        height: 2.5em;
+        line-height: 2.5em;
+        padding: 6px 12px 6px 7px;
+        color: white;
+        background-color: $orange-400;
+        &:hover{
+            color: $orange-500;
+            background-color: $orange-100;
+        }
+    }
+    &.back-end-del {
+        width: 2.5em;
+        height: 2.5em;
+        line-height: 2.5em;
+        padding: 6px 12px 6px 7px;
+        color: white;
+        background-color: $danger;
+        &:hover{
+            color: $danger;
+            background-color: white; 
+        }
+    }
+    &.back-end-info {
+        width: 3em;
+        height: 3em;
+        line-height: 3em;
+        color: white;
+        background-color: $blue-700;
+        &:hover{
+            color: $blue-700;
+            background-color: $cyan-100; 
+        }
+    }
+}

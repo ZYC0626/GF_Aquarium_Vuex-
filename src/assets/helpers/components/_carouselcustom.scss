@@ -1,0 +1,26 @@
+.carousel-item-bgImg {
+    height: 100vh;
+}
+.carousel-caption-custom {
+    background-color: rgba(0, 0, 0, 0.3);
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: 7%;
+    bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+}
+.carousel-caption-custom-text {
+    padding: 1.25rem;
+    font-size: 2rem;
+    margin-left: -2rem;
+    margin-top: -2rem;
+    letter-spacing: 0.5rem;
+    font-weight: 600;
+    @include media-breakpoint-up(md) {
+        font-size: 3rem;
+        margin-left: -3rem;
+        margin-top: -3rem;
+        letter-spacing: 0.8rem;
+    }
+}

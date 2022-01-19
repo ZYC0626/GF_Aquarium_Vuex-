@@ -1,0 +1,79 @@
+.circular-menu {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 2;
+    @include media-breakpoint-up(md) {
+        bottom: 30px;
+        right: 30px;
+    }
+}
+
+.circular-menu .floating-btn {
+    display: block;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    color: $blue-700;
+    background-color: $cyan-100;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 4.3em;
+    cursor: pointer;
+    &:hover {
+        color: $blue-400;
+    }
+}
+
+.circular-menu.active:after {
+    transform: scale3d(5.5, 5.5, 1);
+    transition-timing-function: cubic-bezier(0.68, 1.55, 0.265, 1);
+}
+
+.circular-menu .items-wrapper {
+    padding: 0;
+    margin: 0;
+}
+
+.circular-menu .menu-item {
+    position: absolute;
+    top: 0.2em;
+    right: 0.2em;
+    z-index: -1;
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 1em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3;
+    background-color: cyan-100;
+    transition: transform 0.3s ease, background 0.2s ease;
+}
+
+.circular-menu.active .menu-item {
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.circular-menu.active .menu-item:nth-child(1) {
+    background-color: $blue-700;
+    transform: translate3d(0, -8em, 0);
+    &:hover {
+        background-color: $blue-400;
+    }
+    @include media-breakpoint-up(md) {
+        transform: translate3d(-2.5em, -3.3em, 0);
+    }
+}
+.circular-menu.active .menu-item:nth-child(2) {
+    background-color: $blue-700;
+    transform: translate3d(0, -4em, 0);
+    &:hover {
+        background-color: $blue-400;
+    }
+    @include media-breakpoint-up(md) {
+        transform: translate3d(-4em, -0.1em, 0);
+    }
+}

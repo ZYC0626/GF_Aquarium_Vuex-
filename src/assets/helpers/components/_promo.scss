@@ -1,0 +1,49 @@
+.promo {
+    position: relative;
+    color: $blue-800;
+}
+.promo_box {
+    position: absolute;
+    top: 20%;
+    left: 7.34%;
+    z-index: 2;
+    .title {
+        background-color: rgba(211, 211, 211, 0.3);
+        font-family: "EB Garamond", serif;
+        letter-spacing: 0.1em;
+        display: inline-block;
+        font-size: 3rem;
+        padding: 0 1rem;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+        @include media-breakpoint-up(lg) {
+            font-size: 4rem;
+        }
+    }
+    .content {
+        margin: 0;
+        background-color: rgba(165, 165, 165, 0.3);
+        letter-spacing: 0.1em;
+        font-size: 2.8rem;
+        padding: 0.5rem 1rem;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+        font-weight: 700;
+        @include media-breakpoint-up(lg) {
+            font-size: 4rem;
+        }
+        @include media-breakpoint-up(md) {
+            writing-mode: inherit;
+            margin: 1.5rem 0 0 0;
+            background-color: rgba(211, 211, 211, 0.3);
+        }
+        writing-mode: vertical-lr;
+    }
+}
+.promo_carousel {
+    position: absolute;
+    z-index: 1;
+}
+.promo_start {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+}

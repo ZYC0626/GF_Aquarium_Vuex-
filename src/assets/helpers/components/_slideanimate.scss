@@ -1,0 +1,18 @@
+.slide-in {
+    transition: all 1.5s ease-in-out;
+    opacity: 0;
+    &.slide-start{
+        transform: translateX(-100px);
+    }
+    &.slide-end{
+        transform: translateX(100px); // not work
+    }
+    &.slide-done{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.slide-out{
+    opacity: 0;
+    transform: translateX(50%);
+}

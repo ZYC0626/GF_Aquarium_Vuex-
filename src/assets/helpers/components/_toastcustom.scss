@@ -1,0 +1,20 @@
+.toast-position{
+    z-index: 999;
+    top: 15%;
+    @include media-breakpoint-up(md) {
+        top: 15%;
+    }
+}
+.toast-border{
+    border-left: 6px solid transparent;
+}
+.toast-content{
+    .title{
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+    }
+    .content{
+        font-size: 0.6rem;
+        color: gray;
+    }
+}

@@ -1,0 +1,136 @@
+body {
+    // font-family: 'Roboto Condensed', sans-serif;
+    font-family: "EB Garamond", serif;
+    font-family: "Noto Serif TC", serif;
+}
+hr {
+    border: 0px;
+    background: linear-gradient(to right, $blue 60%, $cyan-200 40%);
+}
+a{
+    color: $blue-700;
+    &:hover{
+        color: $blue-400;
+    }
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+.fw-600 {
+    font-weight: 600;
+}
+.fw-500 {
+    font-weight: 500;
+}
+
+
+.bg-cover {
+    background-size: cover;
+}
+.bg-center {
+    background-position: center center;
+}
+.bg-left {
+    background-position: 75% 50%;
+}
+.bg-right {
+    background-position: 20% 50%;
+}
+
+.bg-xl-transparent {
+    background-color: rgba(255, 255, 255, 0.452);
+    @include media-breakpoint-up(xl) {
+        background-color: transparent !important;
+    }
+}
+.transitionNavbar {
+    transition: all .5s ease-in-out;
+}
+.nav-link {
+    font-size: 1.5rem;
+    color: $blue-800;
+}
+.nav-link-shadow {
+    @include media-breakpoint-up(xl) {
+        text-shadow: 0.1em 0.1em 0.1em #fff;
+    }
+}
+
+.btn-primary:hover {
+    color: $blue-800;
+    background-color: #fff;
+    border-color: #042351;
+}
+.btn-cart .badge {
+    top: -1px;
+    right: -5px;
+}
+.cart-img{
+    width: 135px; 
+    height: 100px;
+    border: 2px solid rgb(216, 216, 216);
+    border-radius: 2px;
+}
+
+.bi-star-fill, .bi-star {
+    color: $yellow;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.mw-300{
+    min-width: 300px;
+}
+
+.prodInfo-img{
+    height: 350px;
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+        height: 100%;
+    }
+}
+.warning{
+    background-color: rgba(0, 0, 0, 0.05);
+    color: $blue-700;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    a{
+        cursor: pointer;
+    }
+    li, p{
+        letter-spacing: 0.2rem;
+    }
+}
+footer {
+    color: $white;
+    letter-spacing: 0.2rem;
+    .bi {
+        font-size: 1.5rem;
+    }
+    a {
+        color: $white;
+        &:hover {
+            color: $cyan-200;
+        }
+    }
+}
+.landing {
+    height: 350px;
+}
+
+.bg-atta-fixed {
+    // background-attachment: fixed;
+    &::before{
+        content: "";
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -100;
+        background: url(https://images.unsplash.com/photo-1573472420143-0c68f179bdc7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80) no-repeat 50% center;
+        background-size: cover;
+    }
+}

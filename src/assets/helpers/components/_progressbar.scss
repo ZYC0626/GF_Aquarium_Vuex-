@@ -1,0 +1,64 @@
+.progressbar {
+    display: flex;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    // counter-reset: step;
+    li {
+        position: relative;
+        width: 33%;
+        &::before {
+            // content: counter(step);
+            // counter-increment: step;
+            font-family: "Material Icons";
+            content: "\ef64";
+            width: 30px;
+            height: 30px;
+            border: 2px solid #bebebe;
+            display: block;
+            margin: 0 auto 10px auto;
+            border-radius: 50%;
+            line-height: 27px;
+            background: white;
+            color: #bebebe;
+            text-align: center;
+            font-weight: bold;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: #979797;
+            top: 15px;
+            left: -50%;
+            z-index: -1;
+        }
+    }
+    .progressbar_text{
+        font-size: 1.2rem;
+        color: #bebebe;
+        font-weight: 600;
+    }
+    .active .progressbar_text{
+        color: $blue-700;
+    }
+    .done .progressbar_text{
+        color: #000;
+    }
+}
+.progressbar li:first-child:after {
+    content: none;
+}
+.progressbar li.active::before , .progressbar li.done::before {
+    border-color: $blue-700;
+    background: $blue-700;
+    color: white;
+}
+.progressbar li.done::before {
+    content: "\e876";
+}
+.progressbar li.active::after , .progressbar li.done::after {
+    background: $blue-700;
+}

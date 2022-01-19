@@ -1,0 +1,32 @@
+.toTop {
+    position: fixed;
+    bottom: 1000px;
+    right: 10px;
+    z-index: 1;
+    color: $blue-700;
+    background-color: $cyan-100;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    border-radius: 30%;
+    padding: 5px 6px 0;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    :hover{
+        animation: bounceTop linear infinite;
+        animation-duration: 1.5s;
+    }
+    &.active{
+        bottom: 45px;
+        opacity: 1;
+    }
+    @include media-breakpoint-up(md) {
+        right: 60px;
+    }
+}
+@keyframes bounceTop {
+    0%   {transform: translateY(0);}
+    20%  {transform: translateY(0);} 
+    80%  {transform: translateY(0);} 
+    100% {transform: translateY(0);} 
+    40%  {transform: translateY(-10px);}
+    60%  {transform: translateY(-20px);}
+}
